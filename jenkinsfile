@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    stages{
+        stage('verifier  maven'){
+            steps{
+                sh  'mvn -v'
+            }
+        }    
+        stage('clean the project ans install  dependances'){
+            steps{
+                sh  'mvn -v'
+            }
+        }    
+        stage('excution du test 2'){
+            steps{
+                sh  'mvn test'
+            }
+        }
+    }
+}
